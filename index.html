@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+  <link rel="stylesheet" href="css/resume.css">
+  <link rel="stylesheet" href="css/sidenav-small.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/circleChart.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      if ($(window).width() < 850) {
+        $("#sidenav-small").show();
+        $("#sidenav").hide();
+        $(".content").css("marginLeft", "0");
+        if ($(window).width() < 640) {
+          $(".year").css("position", "relative");
+          $(".year").css("left", "10px");
+          $(".experience").attr("class", "experience-small")
+        }
+      }
+
+      $(window).resize(function () {
+        windowWidth = $(window).width();
+        if (windowWidth < 850) {
+          $("#sidenav-small").show();
+          $("#sidenav").hide();
+          $(".content").css("marginLeft", "0");
+          if ($(window).width() < 640) {
+            $(".experience").attr("class", "experience-small");
+            $(".year").attr("class", "year-small");
+          }
+        } else {
+          $("#sidenav").show();
+          $("#sidenav-small").hide();
+          $(".content").css("marginLeft", "230px");
+          $(".experience-small").attr("class", "experience");
+          $(".year-small").attr("class", "year");
+        }
+      });
+
+      $(".sidenav").hover(function () {
+        $(".sidenav").stop().animate({ width: "380px" });
+        $(".content").stop().animate({ marginLeft: "380px" });
+        var windowWidth = $(window).width();
+        if (windowWidth < 1150) {
+          $(".skill").css('margin-top', $(".autobiography").height() + 80 + 'px')
+        }
+      },
+        function () {
+          $(".sidenav").stop().animate({ width: "230px" });
+          $(".content").stop().animate({ marginLeft: "230px" });
+          var windowWidth = $(window).width();
+          if (windowWidth < 1150) {
+            $(".skill").css('margin-top', $(".autobiography").height() + 30 + 'px')
+          }
+        });
+
+      $("#autobiography-1").hover(function () {
+        var h = $("#autobiography-1").height();
+        var w = $("#autobiography-1").width();
+        $("#white-bg-1").width(w);
+        $("#white-bg-1").height(h);
+        $("#white-bg-1").css('line-height', h + 'px');
+        $("#white-bg-1").stop().slideDown('slow');
+      },
+        function () {
+          $("#white-bg-1").stop().slideUp('slow');
+        });
+      $("#autobiography-2").hover(function () {
+        var h = $("#autobiography-2").height();
+        var w = $("#autobiography-2").width();
+        $("#white-bg-2").width(w);
+        $("#white-bg-2").height(h);
+        $("#white-bg-2").css('line-height', h + 'px');
+        $("#white-bg-2").stop().slideDown('slow');
+      },
+        function () {
+          $("#white-bg-2").stop().slideUp('slow');
+        });
+      $("#autobiography-3").hover(function () {
+        var h = $("#autobiography-3").height();
+        var w = $("#autobiography-3").width();
+        $("#white-bg-3").width(w);
+        $("#white-bg-3").height(h);
+        $("#white-bg-3").css('line-height', h + 'px');
+        $("#white-bg-3").stop().slideDown('slow');
+      },
+        function () {
+          $("#white-bg-3").stop().slideUp('slow');
+        });
+
+      $("#circle-html").circleChart({
+        value: 70,
+        startAngle: 75,
+        color: "#a1cdca",
+        widthRatio: 0.1,
+        size: 80,
+        text: "70%",
+        textFamily: "Abel",
+        textSize: "16px"
+      });
+      $("#circle-css").circleChart({
+        value: 70,
+        startAngle: 75,
+        color: "#a1cdca",
+        widthRatio: 0.1,
+        size: 80,
+        text: "70%",
+        textFamily: "Abel",
+        textSize: "16px"
+      });
+      $("#circle-jquery").circleChart({
+        value: 65,
+        startAngle: 75,
+        color: "#a1cdca",
+        widthRatio: 0.1,
+        size: 80,
+        text: "65%",
+        textFamily: "Abel",
+        textSize: "16px"
+      });
+      $("#circle-illustrator").circleChart({
+        value: 75,
+        startAngle: 75,
+        color: "#a1cdca",
+        widthRatio: 0.1,
+        size: 80,
+        text: "75%",
+        textFamily: "Abel",
+        textSize: "16px"
+      });
+      $("#circle-photoshop").circleChart({
+        value: 75,
+        startAngle: 75,
+        color: "#a1cdca",
+        widthRatio: 0.1,
+        size: 80,
+        text: "75%",
+        textFamily: "Abel",
+        textSize: "16px"
+      });
+      $("#circle-angular").circleChart({
+        value: 75,
+        startAngle: 75,
+        color: "#a1cdca",
+        widthRatio: 0.1,
+        size: 80,
+        text: "75%",
+        textFamily: "Abel",
+        textSize: "16px"
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      var h = $(".circle-chart").height();
+      var w = $(".circle-chart").width();
+      $(".circle-title").width(w);
+      $(".circle-title").height(h);
+      $(".circle-title").css('line-height', h + h + 40 + 'px');
+
+      var windowWidth = $(window).width();
+      if (windowWidth < 1150) {
+        $(".skill").css('display', 'block');
+        $(".skill").css('margin-top', $(".autobiography").height() + 30 + 'px')
+      }
+
+      $(window).resize(function () {
+        windowWidth = $(window).width();
+        if (windowWidth < 1150) {
+          $(".skill").css('display', 'block');
+          $(".skill").css('margin-top', $(".autobiography").height() + 30 + 'px')
+        } else {
+          $(".skill").css('display', 'inline-block');
+          $(".skill").css('margin-top', '20px')
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="sidenav" class="sidenav">
+    <div class="image-cropper">
+      <img src="img/whale-print.jpg" alt="my picture" class="my-picture">
+    </div>
+    <div class="name">
+      <p class="name-tc">黃亞柔</p>
+      <p class="name-en">Huang YaRou</p>
+    </div>
+    <div class="school">
+      <div class="ntub">
+        <p class="item">國立臺北商業大學</p>
+        <p class="item-detail">資訊管理系</p>
+        <p class="school-year">2013.09 - 2017.06</p>
+      </div>
+      <div class="yuda">
+        <p class="item">育達高級中學</p>
+        <p class="item-detail">資料處理科</p>
+        <p class="school-year">2010.09 - 2013.06</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="sidenav-small" class="sidenav-small">
+    <div class="image-cropper-small">
+      <img src="img/whale-print.jpg" alt="my picture" class="my-picture">
+    </div>
+    <div class="name-small">
+      <p class="name-tc-small">黃亞柔</p>
+      <p class="name-en-small">Huang YaRou</p>
+    </div>
+    <div class="school-small">
+      <div class="ntub">
+        <p class="item">國立臺北商業大學</p>
+        <p class="item-detail">資訊管理系</p>
+        <p class="school-year-small">2013.09 - 2017.06</p>
+      </div>
+      <div class="yuda">
+        <p class="item">育達高級中學</p>
+        <p class="item-detail">資料處理科</p>
+        <p class="school-year-small">2010.09 - 2013.06</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="experience">
+      <p class="title">經歷</p>
+      <p class="item">國立臺北商業大學實習</p>
+      <p class="item-detail">資訊與網路中心 / 前後端網站建置</p>
+      <p class="year">2017.02 - 2017.06</p>
+      <p class="item">教育部資通訊軟體創新人才推升推廣計畫</p>
+      <p class="item-detail">國立臺北商業大學資訊管理系 / 專任助理</p>
+      <p class="year">2015.02 - 2016.01</p>
+      <p class="item">國立臺北商業大學資管系學會</p>
+      <p class="item-detail">文書次長</p>
+      <p class="year">2015.01 - 2016-01</p>
+      <p class="item">國立臺北商業大學資訊管理系校內專題</p>
+      <p class="item-detail">四技組 / 第一名</p>
+      <p class="year">2016</p>
+      <p class="item">經濟部技術處搶鮮大賽</p>
+      <p class="item-detail">Special Topic智慧觀光 / 季軍</p>
+      <p class="year">2015</p>
+      <p class="item">微軟Build The Future青年築夢計畫</p>
+      <p class="item-detail">精神獎</p>
+      <p class="year">2015</p>
+    </div>
+
+    <div class="skill">
+      <p class="title">技能</p>
+      <div id="circle-html" class="circle-chart">
+        <p class="circle-title">HTML5</p>
+      </div>
+      <div id="circle-css" class="circle-chart">
+        <p class="circle-title">CSS</p>
+      </div>
+      <div id="circle-jquery" class="circle-chart">
+        <p class="circle-title">jQuery</p>
+      </div>
+      <div id="circle-illustrator" class="circle-chart">
+        <p class="circle-title">Illustrator</p>
+      </div>
+      <div id="circle-photoshop" class="circle-chart">
+        <p class="circle-title">Photoshop</p>
+      </div>
+      <div id="circle-angular" class="circle-chart">
+        <p class="circle-title">AngularJS</p>
+      </div>
+    </div>
+
+    <div class="autobiography">
+      <p class="title">自傳</p>
+      <div id="autobiography-1" class="autobiography-content">
+        <p>在大學生活我嘗試了很多以前內向的我從未想像過的事，在大學迎新擔任總務股長，並在大二時接下系學會文書次長的工作，也參加了許多校外競賽。每一項都需要團隊合作，我學會了許多溝通技巧，並且時常擔任團隊內傾聽及整合意見的角色。</p>
+        <div id="white-bg-1" class="white-bg">團隊合作、溝通聆聽</div>
+      </div>
+      <div id="autobiography-2" class="autobiography-content">
+        <p>大四畢業前，我開始了校內實習，負責部分學校網站改版的前後端網頁建置，也在大學四年內陸續參加了多項校外競賽，其中包括了商管行銷類以及程式設計類的競賽，雖然不是每個比賽都獲得好成績，但我從這之中得到許多寶貴的學習機會，也透過實習及競賽增加了許多實務經驗。</p>
+        <div id="white-bg-2" class="white-bg">實務經驗</div>
+      </div>
+      <div id="autobiography-3" class="autobiography-content">
+        <p>我在大學同學的鼓勵下參加過很多比賽、活動，度過了充滿挑戰的大學生活，雖然這些競賽中並不全是美好的事，但都讓我成長許多，我認為每一次的經歷都讓我變成更好的人，即使結果不盡美好，但過程更為重要，每次都要全力以赴，人生不怕後悔，不留遺憾。</p>
+        <div id="white-bg-3" class="white-bg">樂於挑戰</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Abel', 'cwTeXYen', sans-serif;
+    font-size: 20px;
+}
+
+.sidenav {
+    height: 100vh;
+    width: 230px;
+    min-width: 230px;
+    background: #fadc89;
+    position: fixed;
+    overflow: hidden;
+}
+
+.image-cropper {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50%;
+    overflow:hidden;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.my-picture {
+    height: 100%;
+    width: auto;
+}
+
+.name {
+    margin-bottom: 30px;
+}
+
+.name p{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    font-family: 'Abel', 'cwTeXYen', sans-serif;
+}
+
+.name-tc {
+    font-size: 38px;
+}
+
+.name-en {
+    font-size: 35px;
+}
+
+.school {
+    width: max-content;
+    margin-left: 35px;
+}
+
+.ntub,
+.yuda {
+    margin: 10px 0;
+}
+
+.item {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    font-family: 'Abel','cwTeXYen', sans-serif;
+    font-size: 22px;
+}
+
+.item-detail {
+    margin: 0;
+    display: inline-block;
+    font-family: 'Abel', 'cwTeXYen', sans-serif;
+    font-size: 18px;
+}
+
+.school-year{
+    display: inline-block;
+    margin: 0;
+    margin-left: 110px;
+    background: white;
+    padding: 0 12px;
+    font-size: 13px;
+    font-family: 'Abel', sans-serif;
+    width: fit-content;
+}
+
+.content {
+    height: 100vh;
+    position: relative;
+    margin-left: 230px;
+    top: 0;
+    padding: 0 40px;
+}
+
+.experience {
+    margin-top: 20px;
+    display: inline-block;
+    width: 50%;
+    min-width: 600px;
+    position: relative;
+
+}
+
+.title {
+    font-family: 'cwTeXYen', sans-serif;
+    font-size: 35px;
+    border-left: 3px solid #a1cdca;
+    padding-left: 10px;
+    display: block;
+    margin: 20px 0;
+}
+
+.year{
+    display: inline-block;
+    background: #a1cdca;
+    position: absolute;
+    width: max-content;
+    padding: 0 10px;
+    right: 80px;
+    font-size: 14px;
+    font-family: 'Abel', sans-serif;
+    color: white;
+}
+
+.skill {
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.circle-chart {
+    display: inline-block;
+    position: relative;
+    margin: 10px 20px;
+    margin-bottom: 50px;
+}
+
+.circle-title {
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.autobiography {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.autobiography-content {
+    position: relative;
+}
+
+.white-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-family: 'Abel', 'cwTeXYen', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 3px #b0aeab;
+    color: #b0aeab;
+}
